@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/arka_plan"
+    android:padding="16dp">
+
+    <!-- ================= 1. BLOK: RESİMLER ================= -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/blok_resimler"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="2dp"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/blok_kayit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/images_1" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/images_4" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/images_3" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/images_2" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- ================= 2. BLOK: KAYIT FORMU ================= -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/blok_kayit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="2dp"
+        app:layout_constraintTop_toBottomOf="@+id/blok_resimler"
+        app:layout_constraintBottom_toTopOf="@+id/blok_giris"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/etAdSoyad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_ad_soyad"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/etEposta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_eposta"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/etYas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_yas"
+                android:inputType="number" />
+
+            <Button
+                android:id="@+id/btnKayitOl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/kayit_buton_renk"
+                android:text="@string/btn_kayit_ol"
+                android:textColor="@color/beyaz" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- ================= 3. BLOK: GİRİŞ FORMU ================= -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/blok_giris"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="2dp"
+        app:layout_constraintTop_toBottomOf="@+id/blok_kayit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/etKullaniciAdi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_kullanici_adi"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/etSifre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_sifre"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/btnGirisYap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/giris_buton_renk"
+                android:text="@string/btn_giris_yap"
+                android:textColor="@color/beyaz" />
+
+            <TextView
+                android:id="@+id/tvSifremiUnuttum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/btn_sifremi_unuttum"
+                android:textColor="@color/giris_buton_renk"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Application</string>
+
+    <!-- Kayıt Ekranı Metinleri -->
+    <string name="hint_ad_soyad">Ad Soyad</string>
+    <string name="hint_eposta">E-posta Adresi</string>
+    <string name="hint_yas">Yaş</string>
+    <string name="btn_kayit_ol">Kayıt Ol</string>
+
+    <!-- Giriş Ekranı Metinleri -->
+    <string name="hint_kullanici_adi">Kullanıcı Adı</string>
+    <string name="hint_sifre">Şifre</string>
+    <string name="btn_giris_yap">Giriş Yap</string>
+    <string name="btn_sifremi_unuttum">ŞİFREMİ UNUTTUM?</string>
+</resources>
